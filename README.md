@@ -29,6 +29,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Update all and build shop.html using Heisch's gloomhaven-item-db
+Run `python GloomUpdate.py`
+
+Paste appropriate data into each field.
+
 ## Next steps
 
 - Update JSON with latest version of Scenario Tree data (https://boardgamegeek.com/filepage/143772/scenario-flowchart)
