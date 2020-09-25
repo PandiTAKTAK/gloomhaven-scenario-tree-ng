@@ -6,11 +6,16 @@ def submit_new_data():
     print("Setting scenarios to:\n%s\n\nSetting shop to:\n%s\n\n" % (e1.get(), e2.get()))
     update_scenarios()
     create_shop()
+    master.destroy()
+    print("\n\nAll actions complete...")
 
 def update_scenarios():
     create_scenarios()
     print("Building scenarios and GitHub Pages...")
     p = subprocess.Popen('npm run build', stdout=subprocess.PIPE, shell=True)
+    for line in p.stdout:
+        print(line)
+    p.wait()
     print("Building scenarios and GitHub Pages complete...")
 
 def create_scenarios():
@@ -29,7 +34,7 @@ def create_scenarios():
 
 def create_shop():
     print("Shop creation started...")
-    location = str("./")
+    location = str("./docs/")
     print('Using location      : ' + location)
 
     build_timestamp = datetime.datetime.now()
@@ -55,6 +60,7 @@ def create_shop():
 
 
 master = tk.Tk()
+master.title("Gloomhaven Settings")
 tk.Label(master, 
          text="Scenarios").grid(row=0)
 tk.Label(master, 
