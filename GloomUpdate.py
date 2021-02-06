@@ -39,6 +39,7 @@ def create_new_scenarios():
     print('Using location      : ' + location)
 
     build_timestamp = datetime.datetime.now()
+    current_day     = datetime.date.today().day
     current_month   = datetime.date.today().month
     current_year    = datetime.date.today().year
 
@@ -48,7 +49,7 @@ def create_new_scenarios():
 
     output_file.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n")
     output_file.write("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n")
-    output_file.write("<head>\n<title>Updated {0}/{1}</title>\n".format(current_month, current_year))
+    output_file.write("<head>\n<title>Updated {0}/{1}/{2}</title>\n".format(current_day, current_month, current_year))
     output_file.write("<style type=\"text/css\">\nbody, html{margin: 0; padding: 0; height: 100%; overflow: hidden;}\n</style>\n")
     output_file.write("</head>\n")
     output_file.write("<body>\n<iframe width=\"100%\" height=\"100%\"\"\n")
@@ -65,6 +66,7 @@ def create_shop():
     print('Using location      : ' + location)
 
     build_timestamp = datetime.datetime.now()
+    current_day     = datetime.date.today().day
     current_month   = datetime.date.today().month
     current_year    = datetime.date.today().year
 
@@ -74,7 +76,7 @@ def create_shop():
 
     output_file.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n")
     output_file.write("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n")
-    output_file.write("<head>\n<title>Updated {0}/{1}</title>\n".format(current_month, current_year))
+    output_file.write("<head>\n<title>Updated {0}/{1}/{2}</title>\n".format(current_day, current_month, current_year))
     output_file.write("<style type=\"text/css\">\nbody, html{margin: 0; padding: 0; height: 100%; overflow: hidden;}\n</style>\n")
     output_file.write("</head>\n")
     output_file.write("<body>\n<iframe width=\"100%\" height=\"100%\"\"\n")
